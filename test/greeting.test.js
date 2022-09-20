@@ -37,14 +37,14 @@ describe("greeting", () => {
 
     expect(result).toEqual("Hello, Jill, Jane and John.")
   })
-  it("returns 'Hello, Amy and Charlotte. AND HELLO BRIAN!' when recieves Amy", "BRIAN", "Charlotte", () => {
 
+  it("returns 'Hello, Amy and Charlotte. AND HELLO BRIAN!' when recieves Amy BRIAN, Charlotte", () => {
 
-    const namesArray = ["Jill", "Jane", "John"]
+    const namesArray = ["Amy", "BRIAN", "Charlotte"]
 
     const result = greeting.sayHi(namesArray)
 
-    expect(result).toEqual("Hello, Jill, Jane and John.")
+    expect(result).toEqual("Hello, Amy and Charlotte. AND HELLO BRIAN!")
   })
 })
 
